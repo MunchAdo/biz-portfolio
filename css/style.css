@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f1f1f1;
+    padding: 0px;
+    font-family: Arial;
+    margin: 0;
+  }
+
+  .wrapper{
+      position: relative;
+  }
+  .container-flud{
+      width: 100%;
+      margin: 0 auto;
+  }
+
+  header{
+    background: #fff;
+    padding: 15px 20px;
+  }
+
+  .pd20{
+      padding: 20px;
+  }
+  
+  /* Center website */
+  .main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 50px;
+    word-break: break-all;
+  }
+  
+  .filter_row {
+    margin: 8px -16px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .filter_row,
+  .filter_row > .filter_column {
+    padding: 8px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .filter_column {
+    float: left;
+    /* width: 20%; */
+    display: none; /* Hide columns by default */
+  }
+  /* .column:nth-child(odd){
+    background-color: white;
+  }
+  .column:nth-child(even){
+    background-color: #f5f5f5;
+  } */
+  
+  /* Clear floats after rows */
+  .filter_row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .filter_content {
+    background-color: white;
+    padding: 60px;
+    position: relative;
+    height: 100%;
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .filter_btn {
+    border: none;
+    outline: none;
+    padding: 12px 10px;
+    min-width: 40px;
+    background-color: white;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .filter_btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background color to the active button */
+  .filter_btn.active {
+    background-color: #ff7836;
+     color: white;
+  }
+
+  h4{
+    width: 50px;
+    height: 50px;
+    background: #ff7836;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    left: 0;
+    text-transform: uppercase;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+    display: block;
+}
+ul li a{
+    color:#000;
+    text-decoration: none;
+    line-height: 24px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .filter_column {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .filter_column {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .filter_column {
+        width: 33.333%;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .filter_column {
+        width: 25%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .filter_column {
+        width: 20%;
+    }
+}
